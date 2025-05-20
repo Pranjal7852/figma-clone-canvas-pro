@@ -1,10 +1,8 @@
 
 import React from "react";
-import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Link } from "react-router-dom";
 
 const HaveMaterial: React.FC = () => {
   return (
@@ -90,17 +88,15 @@ const HaveMaterial: React.FC = () => {
           </div>
         </div>
         
-        {/* Submit button */}
-        <div className="flex justify-end max-md:justify-center">
+        {/* Submit button - Repositioned */}
+        <div className="flex justify-end">
           <Button
-            className="absolute right-0 mt-10 py-[10.5px] px-[50px] bg-black border border-black text-white font-poppins text-2xl cursor-pointer max-md:relative max-md:w-full max-md:mt-5 max-sm:text-xl max-sm:py-2 max-sm:px-8"
+            className="mt-10 py-[10.5px] px-[50px] bg-black border border-black text-white font-poppins text-2xl cursor-pointer max-md:w-full max-sm:text-xl max-sm:py-2 max-sm:px-8"
           >
             Get inspired
           </Button>
         </div>
       </div>
-      
-      <Footer />
     </div>
   );
 };

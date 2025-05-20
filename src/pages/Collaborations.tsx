@@ -1,6 +1,5 @@
 
 import React from "react";
-import Footer from "@/components/layout/Footer";
 import { Link } from "react-router-dom";
 
 const Collaborations: React.FC = () => {
@@ -61,8 +60,6 @@ const Collaborations: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      <Footer />
     </div>
   );
 };

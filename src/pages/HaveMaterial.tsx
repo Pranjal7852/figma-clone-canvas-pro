@@ -3,8 +3,16 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useNavigate } from "react-router-dom";
 
 const HaveMaterial: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate("/hm_brandmatch");
+  };
+
   return (
     <div className="relative max-w-[1280px] mx-auto p-[40px_20px] bg-white">
       {/* Form header */}
@@ -19,7 +27,7 @@ const HaveMaterial: React.FC = () => {
           Find the material that brings your product to life
         </h1>
         
-        <div className="max-w-[905px] mx-auto max-sm:px-5">
+        <form onSubmit={handleSubmit} className="max-w-[905px] mx-auto max-sm:px-5">
           {/* Company name field */}
           <div className="mb-10">
             <label className="font-mulish text-xl font-extrabold text-[#2D2D2D] mb-6 block max-sm:text-lg">
@@ -86,16 +94,17 @@ const HaveMaterial: React.FC = () => {
               If you don't have a brand in mind, the next step will offer you to choose between 5 Brands that would make a perfect collaboration.
             </p>
           </div>
-        </div>
         
-        {/* Submit button - Repositioned */}
-        <div className="flex justify-end">
-          <Button
-            className="mt-10 py-[10.5px] px-[50px] bg-black border border-black text-white font-poppins text-2xl cursor-pointer max-md:w-full max-sm:text-xl max-sm:py-2 max-sm:px-8"
-          >
-            Get inspired
-          </Button>
-        </div>
+          {/* Submit button - Repositioned */}
+          <div className="flex justify-end">
+            <Button
+              type="submit"
+              className="mt-10 py-[10.5px] px-[50px] bg-black border border-black text-white font-poppins text-2xl cursor-pointer max-md:w-full max-sm:text-xl max-sm:py-2 max-sm:px-8"
+            >
+              Get inspired
+            </Button>
+          </div>
+        </form>
       </div>
     </div>
   );

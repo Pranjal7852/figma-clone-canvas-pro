@@ -1,10 +1,10 @@
+
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import HowItWorks from "@/components/sections/HowItWorks";
 import FaqSection from "@/components/sections/FaqSection";
 import Footer from "@/components/layout/Footer";
-import ContactForm from "@/components/ContactForm";
 
 const Index: React.FC = () => {
   return (
@@ -19,7 +19,6 @@ const Index: React.FC = () => {
         className="aspect-[1.43] object-contain w-full self-stretch mt-[115px] max-md:max-w-full max-md:mt-10"
       />
       
-      <ContactForm />
       <FaqSection />
       <Footer />
     </div>
